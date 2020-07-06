@@ -2,6 +2,8 @@ from selenium import webdriver
 import time
 import os
 
+
+
 ##### Automatically setup Paperspace for use with FastAI-type models #####
 
 url = 'https://www.paperspace.com/console/account/api'
@@ -19,6 +21,7 @@ gitName = 'A-idan'
 gitURL = 'https://github.com/A-idan/paperspace'
 
 
+
 ##### Navigating to webpage #####
 
 driver = webdriver.Chrome('/Users/Aidan/Documents/Paperspace/chromedriver')
@@ -34,9 +37,13 @@ passBox.send_keys(pspacePass)
 
 driver.find_element_by_id('button-login').click()
 
-time.sleep(2)
+time.sleep(3)
 
 ##### API Key Generation #####
+
+driver.get(url)
+time.sleep(3)
+
 
 nameBox = driver.find_element_by_id('input-name')
 nameBox.send_keys(apiName)
@@ -46,7 +53,7 @@ nameBox.send_keys(apiDesc)
 
 driver.find_element_by_xpath('//*[@type="submit"]').click()
 
-time.sleep(2)
+time.sleep(3)
 
 ##### Local use of API Key #####
 
@@ -58,13 +65,13 @@ os.system("gradient apiKey " + apiKey)
 
 driver.get(url2)
 
-time.sleep(2)
+time.sleep(3)
 
 driver.find_element_by_xpath('//*[@class="strong tab"]').click()
 
 driver.find_element_by_xpath("//*[text()='Free-GPU']").click()
 
-time.sleep(2)
+time.sleep(3)
 
 driver.find_element_by_class_name("greenActionButton").click()
 
