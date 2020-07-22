@@ -12,14 +12,6 @@ url2 = 'https://www.paperspace.com/console/notebooks'
 email = 'quilocs@gmail.com'
 pspacePass = 'TestingPassword'
 
-apiName = 'Test'
-apiDesc = 'Automatically generated API Key'
-nbName = 'Testing Notebook'
-
-projectName = 'ImageClassifier'
-gitName = 'A-idan'
-gitURL = 'https://github.com/A-idan/paperspace'
-
 options = webdriver.ChromeOptions()
 options.add_argument("--start-maximized")
 
@@ -62,7 +54,6 @@ def notebook_upload():
 
     driver.find_element_by_name("datafile").send_keys(path)
     time.sleep(5)
-    driver.find_element_by_xpath('//*[@class="btn btn-primary btn-xs upload_button"]').click()
     driver.find_element_by_xpath('//*[@class="btn btn-primary btn-xs upload_button"]').click()
 
 

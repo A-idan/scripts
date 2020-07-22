@@ -16,10 +16,6 @@ url3 = 'https://www.paperspace.com/console/account/api'
 email = '_________@gmail.com'
 pspacePass = 'TestingPassword'
 
-projectName = 'ImageClassifier'
-gitName = 'A-idan'
-gitURL = 'https://github.com/A-idan/paperspace'
-
 driver = webdriver.Chrome('/Users/Aidan/Documents/Paperspace/chromedriver')
 
 yesChoice = ['yes', 'y']
